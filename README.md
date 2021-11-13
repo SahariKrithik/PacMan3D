@@ -15,4 +15,4 @@ Unity Case Study
 
 ~Mechanics 
 
-Collect Biscuits To increase score . Make sure to never step on the traps or you will die! . 
+Collect Biscuits To increase score . Make sure to never step on the traps or you will die . 
