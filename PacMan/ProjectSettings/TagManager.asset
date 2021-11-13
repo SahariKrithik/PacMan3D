@@ -7,6 +7,14 @@ TagManager:
   - Enemy
   - MazeGeo
   - Biscuit
+  - ScoreTextTag
+  - ScoreHandler
+  - LeftTP
+  - RightTP
+  - SpawnPoint
+  - Unharmful Trap
+  - Harmful Trap
+  - Dead_Panel
   layers:
   - Default
   - TransparentFX

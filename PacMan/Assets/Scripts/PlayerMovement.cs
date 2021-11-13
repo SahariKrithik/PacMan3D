@@ -5,20 +5,24 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     
-    Rigidbody rb;
+    Rigidbody rb; // rigidbody variable to access rigidbody component of the player
     public float playerSpeed = 0.1f;
-    bool turning;
+    
+    bool turning; // boolean to check if we pressed any of these WSAD to turn forward/backward/left/right
+ 
     void Start()
     {
+        
+       
         rb = GetComponent<Rigidbody>();
         turning = false;
-        
     }
 
     void FixedUpdate()
     {
         if (!turning) //turning off freezeconstraint if not turning
         {
+            //forever move forward part
             rb.constraints = RigidbodyConstraints.None;
             Vector3 forwardMove = transform.forward * playerSpeed * Time.fixedDeltaTime;
             rb.MovePosition(rb.position + forwardMove);
@@ -30,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     }
      void Update()
     {
-        turn();
+        turn(); 
     }
 
     void turn()
@@ -63,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         else
             turning = false;
 
-        if (Input.GetKeyDown(KeyCode.S)) //ForwardTurn
+        if (Input.GetKeyDown(KeyCode.S)) //BackwardTurn
         {
             turning = true;
             rb.constraints = RigidbodyConstraints.FreezePosition;
